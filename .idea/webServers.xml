@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d50f413c-c458-4bd8-bfdd-5af3dd15e207" name="ukraine" url="http://neverovs.ftp.tools">
+        <fileTransfer rootFolder="/neverovsky.com.ua/wild-oasis-site" host="neverovs.ftp.tools" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
