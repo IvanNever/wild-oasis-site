@@ -3,18 +3,22 @@ import Image from "next/image";
 import { getCabin } from "@/app/_lib/data-service";
 
 export async function generateMetadata({ params }) {
-  const { name } = await getCabin(params.cabinId);
+  const cabin = await getCabin(params.cabinId);
 
-  if (!name) return null;
+  if (!cabin) return null;
 
   return {
-    title: `Cabin ${name}`,
+    title: `Cabin ${cabin.name}`,
   };
 }
 
 export default async function Page({ params }) {
+  const cabin = await getCabin(params.cabinId);
+
+  if (!cabin) return null;
+
   const { id, name, maxCapacity, regularPrice, discount, image, description } =
-    await getCabin(params.cabinId);
+    cabin;
 
   return (
     <div className="max-w-6xl mx-auto mt-8">
